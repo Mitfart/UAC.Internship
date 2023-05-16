@@ -15,15 +15,49 @@ console.log(GetSameLetters(b));
 
 
 function GetSameLetters(strings) {
-   return strings[0]
-      .split('')
-      .filter(char => {
-         return ArrayEquals(
-            strings,
-            strings.filter(s => s.match(char))
-         )
-      });
+   let result = null;
+
+   for (const str of strings) {
+      let curResult = str.split('')
+         .filter(char => {
+            return ArrayEquals(
+               strings,
+               strings.filter(s => s.match(char))
+            )
+         });
+
+      result = (result ?? curResult).filter(c => curResult.includes(c));
+
+      if (result.length > curResult.length)
+         result = curResult;
+   }
+
+   return result;
 }
+
+
+/*
+function GetSameLetters(strings) {
+   let root = strings[0].split('').sort();
+   let resCase = [];
+
+   for (let start = 0; start < root.length; start++) {
+      for (let length = 0; length < root.length - start; length++) {
+         let end = start + length + 1;
+         let matchCase = root.slice(start, end);
+         let curRes = strings.filter(s => s.split('').sort().join('').match(matchCase.join('')));
+
+         // console.log(matchCase + " -> " + curRes)
+
+         if (ArrayEquals(curRes, strings) && matchCase.length > resCase.length) {
+            resCase = matchCase;
+         }
+      }
+   }
+
+   return resCase;
+}
+*/
 
 
 function ArrayEquals(a, b) {
