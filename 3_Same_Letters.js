@@ -32,7 +32,7 @@ function GetSameLetters(strings) {
          result = curResult;
    }
 
-   return result;
+   return result.sort();
 }
 
 
