@@ -1,5 +1,5 @@
 :root {
-    --c-primary: #e33c3c;
+    --c-primary: #f84c4c;
     --c-secondary: #100010;
     --c-base: #fdf6f2;
 
@@ -16,14 +16,16 @@
 * {
     font-family: 'Roboto', Arial, Serif, sans-serif;
     font-size: 14px;
-    line-height: 2em;
+    line-height: 2;
     text-decoration: none;
 
     transition: .125s ease-in-out;
+    gap: .5rem;
 }
 
 body {
     min-width: 320px;
+    color: var(--c-secondary);
 }
 
 img {
@@ -31,29 +33,26 @@ img {
     height: auto;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
-}
 
-a:visited {
-    color: inherit;
-}
 
-a:hover,
-a:focus {
-    color: var(--c-secondary);
+.rect:before {
+    content: '';
+    padding-bottom: 100%;
+    float: left;
 }
+.rect_25:before { padding-bottom: 25%; }
+.rect_50:before { padding-bottom: 50%; }
+
+
+
 
 .btn {
+    color: var(--c-base);
     background-color: var(--c-primary);
+    display: flex;
+    align-items: center;
 }
 
 .btn:hover {
     background-color: var(--c-primary);
-}
-
-.btn {
-    display: flex;
-    align-items: center;
 }

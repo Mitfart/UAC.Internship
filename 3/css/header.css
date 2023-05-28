@@ -9,10 +9,8 @@
 
 .header__menu {}
 
-
 .header__item {
     color: var(--c-base);
-
     line-height: 1em;
     text-align: center;
     padding: .5rem;
@@ -29,14 +27,15 @@
 
 .search__modal-content {
     padding: 1rem;
-    gap: 1rem;
+    gap: 1.5rem;
 }
-.search {
+.search {}
+.search__input-group {
+    gap: 0;
 }
 .search__results {
     display: flex;
     flex-direction: column;
-    gap: .5rem;
 }
 .search__result {
     border: .125rem solid rgba(var(--c-secondary-rgb), .125);
@@ -48,3 +47,21 @@
 .search__btn {
     color: var(--c-base);
 }
+
+
+
+.cart__modal-content {
+    gap: 0;
+}
+.cart__img {
+    min-width: 5rem;
+    max-width: 25%;
+}
+.cart__modal-header {
+    background-color: var(--c-primary);
+    color: var(--c-base);
+}
+.cart__btn-close {
+    color: var(--c-base);
+}
+

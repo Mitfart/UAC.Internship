@@ -33,22 +33,31 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <a href="#" class="header__item header__search">
-                        +7 777 777 77 77
+                    <a type="phone" href="#" class="btn d-inline-flex header__item">
                         <i class="fa-solid fa-phone"></i>
+                        <span class="lh-1 d-none d-sm-inline">+7 777 777 77 77</span>
                     </a>
                 </div>
                 <div class="col header__menu d-flex justify-content-end align-items-center">
 
-                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                         aria-hidden="true">
+                    <button class="btn header__item search__btn"
+                            data-bs-target="#search__modal"
+                            data-bs-toggle="modal"
+                            type="button">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                    <div class="modal fade"
+                         id="search__modal"
+                         aria-labelledby="search__modal"
+                         aria-hidden="true"
+                         tabindex="-1">
                         <div class="modal-dialog">
                             <div class="modal-content search__modal-content">
                                 <form id="search"
                                       action="#"
                                       method="post"
                                       class="search flex-grow-1">
-                                    <div class="input-group">
+                                    <div class="input-group search__input-group">
                                         <input type="text"
                                                class="form-control fs-4"
                                                placeholder="Search..."
@@ -71,20 +80,91 @@
                         </div>
                     </div>
 
-                    <button type="button"
-                            class="btn header__item search__btn search__btn_open"
+                    <button class="btn header__item cart__btn position-relative"
+                            type="button"
                             data-bs-toggle="modal"
-                            data-bs-target="#exampleModal">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </button>
-                    <a href="#"
-                       class="btn header__item">
+                            data-bs-target="#cart__modal">
                         <i class="fa-solid fa-bag-shopping"></i>
-                    </a>
-                    <a href="#"
-                       class="btn header__item">
-                        <i class="fa-solid fa-user"></i>
-                    </a>
+                        9+
+                        <span class="badge position-absolute top-100 start-50 translate-middle rounded-pill">
+
+                            <span class="visually-hidden">Cart</span>
+                        </span>
+                    </button>
+                    <div class="modal fade modal-xl"
+                         aria-labelledby="cart__modal"
+                         id="cart__modal"
+                         aria-hidden="true"
+                         tabindex="-1">
+                        <div class="modal-dialog">
+                            <div class="modal-content cart__modal-content">
+                                <div class="modal-header cart__modal-header">
+                                    <h1 class="modal-title fs-5">
+                                        Корзина
+                                    </h1>
+                                    <button class="btn cart__btn-close"
+                                            aria-label="Close"
+                                            data-bs-dismiss="modal"
+                                            type="button">
+                                        <i class="fa-solid fa-xmark fs-4"></i>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <table class="table">
+                                        <thead>
+                                        <tr>
+                                            <th class="col">Фото</th>
+                                            <th class="col">Цена</th>
+                                            <th class="col">Кол-во</th>
+                                        </tr>
+                                        </thead>
+
+                                        <tbody>
+                                        <tr>
+                                            <td><img class="rect cart__img" alt="#" src="./img/products/pc.webp"></td>
+                                            <td>1</td>
+                                            <td>1000</td>
+                                        </tr>
+                                        <tr>
+                                            <td><img class="rect cart__img" alt="#" src="./img/products/phone.webp"></td>
+                                            <td>1</td>
+                                            <td>1000</td>
+                                        </tr>
+                                        <tr>
+                                            <td><img class="rect cart__img" alt="#" src="./img/products/printer.webp"></td>
+                                            <td>1</td>
+                                            <td>1000</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="modal-footer">
+                                    <button class="btn"
+                                            data-bs-dismiss="modal"
+                                            type="button">
+                                        Close
+                                    </button>
+                                    <button class="btn"
+                                            type="button">
+                                        Save changes
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <button aria-expanded="false"
+                                class="btn header__item"
+                                data-bs-toggle="dropdown"
+                                type="button">
+                            <i class="fa-solid fa-user"></i>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end fade">
+                            <li><a class="dropdown-item" href="#">Войти</a></li>
+                            <li><a class="dropdown-item" href="#">Зарегестрироваться</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
