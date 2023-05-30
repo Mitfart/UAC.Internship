@@ -1,7 +1,7 @@
 :root {
     --c-primary: #f84c4c;
     --c-secondary: #100010;
-    --c-base: #fdf6f2;
+    --c-base: #ffffff;
 
     --c-primary-rgb: 219, 60, 64;
     --c-secondary-rgb: 16, 0, 16;
@@ -25,25 +25,73 @@
 
 body {
     min-width: 320px;
+    min-height: 100vh;
     color: var(--c-secondary);
+    background-color: var(--c-base);
+    display: flex;
+    flex-direction: column;
+    gap: 0;
 }
 
-img {
-    width: 100%;
-    height: auto;
+
+
+.rect {
+    display: flex;
+    gap: 0;
 }
-
-
-
 .rect:before {
     content: '';
+    float: right;
     padding-bottom: 100%;
-    float: left;
 }
 .rect_25:before { padding-bottom: 25%; }
 .rect_50:before { padding-bottom: 50%; }
 
 
+a {
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    color: var(--c-primary);
+    font-size: inherit;
+}
+a:hover, a:focus {
+    color: var(--c-secondary);
+}
+a:before {
+    content: '';
+    width: 0;
+    height: .125em;
+    border-radius: 1000rem;
+
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    Translate: -50% -100%;
+    background-color: var(--c-primary);
+
+    transition: .125s ease-in-out;
+}
+
+a:hover:before,
+a:focus:before {
+    width: 100%;
+}
+
+
+.background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    Translate: -50% -50%;
+}
+.background_contain {
+    object-fit: contain;
+}
 
 
 .btn {
@@ -55,4 +103,49 @@ img {
 
 .btn:hover {
     background-color: var(--c-primary);
+}
+
+
+.title {
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+.product {
+    height: 100%;
+}
+.product:hover {
+    box-shadow: 0 .5rem 1.5rem -.5rem rgba(var(--c-secondary-rgb), .25);
+}
+.product__body {
+    display: flex;
+    flex-direction: column;
+}
+.product__main {
+    flex-grow: 1;
+}
+.product__title {
+    white-space: nowrap;
+    overflow: hidden;
+}
+.product__description {
+    flex-grow: 1;
+}
+.product__price {
+    color: var(--c-primary);
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+}
+.product__price_old {
+    color: rgba(var(--c-secondary-rgb), .5);
+    font-size: 1rem;
+    text-decoration: line-through;
+    font-weight: 300;
+}
+
+.product__footer {
+    padding-top: 1rem;
+    border-top: .125rem solid rgba(var(--c-secondary-rgb), .125);
 }
