@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Title</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+          crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/reset.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+          integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer"/>
+
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/header.css">
+</head>
+
+
+<body>
+<header class="header">
+    <div class="header__top py-1">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <a type="phone" href="#" class="btn d-inline-flex header__item">
+                        <i class="fa-solid fa-phone"></i>
+                        <span class="lh-1 d-none d-sm-inline">+7 777 777 77 77</span>
+                    </a>
+                </div>
+                <div class="col header__menu d-flex justify-content-end align-items-center">
+
+                    <button class="btn header__item search__btn"
+                            data-bs-target="#search__modal"
+                            data-bs-toggle="modal"
+                            type="button">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                    <div class="modal fade"
+                         id="search__modal"
+                         aria-labelledby="search__modal"
+                         aria-hidden="true"
+                         tabindex="-1">
+                        <div class="modal-dialog">
+                            <div class="modal-content search__modal-content">
+                                <form id="search"
+                                      action="#"
+                                      method="post"
+                                      class="search flex-grow-1">
+                                    <div class="input-group search__input-group">
+                                        <input type="text"
+                                               class="form-control fs-4 search__field"
+                                               placeholder="Search..."
+                                               aria-label="Search"
+                                               name="search">
+                                        <button class="btn search__btn search__btn_clear" type="button">
+                                            <i class="fa-solid fa-xmark fs-4"></i>
+                                        </button>
+                                    </div>
+                                </form>
+                                <div class="search__results">
+                                    <a href="#" class="search__result p-2 rounded">
+                                        <h5 class="result__title fw-light m-0">Some Res</h5>
+                                    </a>
+                                    <a href="#" class="search__result p-2 rounded">
+                                        <h5 class="result__title fw-light m-0">Some Res</h5>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn header__item cart__btn position-relative"
+                            type="button"
+                            data-bs-toggle="modal"
+                            data-bs-target="#cart__modal">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        9+
+                        <span class="badge position-absolute top-100 start-50 translate-middle rounded-pill">
+                            <span class="visually-hidden">Cart</span>
+                        </span>
+                    </button>
+                    <div class="modal fade modal-xl"
+                         aria-labelledby="cart__modal"
+                         id="cart__modal"
+                         aria-hidden="true"
+                         tabindex="-1">
+                        <div class="modal-dialog">
+                            <div class="modal-content cart__modal-content">
+                                <div class="modal-header cart__modal-header">
+                                    <h1 class="modal-title fs-5">
+                                        Корзина
+                                    </h1>
+                                    <button class="btn cart__btn-close"
+                                            aria-label="Close"
+                                            data-bs-dismiss="modal"
+                                            type="button">
+                                        <i class="fa-solid fa-xmark fs-4"></i>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <table class="table table-borderless text-center">
+                                        <thead>
+                                        <tr>
+                                            <th scope="col" class="text-start">Товар</th>
+                                            <th scope="col">Кол-во</th>
+                                            <th scope="col">Цена</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td colspan="2" class="d-flex">
+                                                <a href="#" class="d-flex w-100 cart__link">
+                                                    <img class="w-25 rect cart__img img-thumbnail" alt="#"
+                                                         src="./img/products/pc.webp">
+                                                    <h5 class="text-start">Title</h5>
+                                                </a>
+                                            </td>
+                                            <td>1</td>
+                                            <td>1000</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2" class="d-flex">
+                                                <a href="#" class="d-flex w-100 cart__link">
+                                                    <img class="w-25 rect cart__img img-thumbnail" alt="#"
+                                                         src="./img/products/phone.webp">
+                                                    <h5 class="text-start">Title</h5>
+                                                </a>
+                                            </td>
+                                            <td>1</td>
+                                            <td>1000</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2" class="d-flex">
+                                                <a href="#" class="d-flex w-100 cart__link">
+                                                    <img class="w-25 rect cart__img img-thumbnail" alt="#"
+                                                         src="./img/products/printer.webp">
+                                                    <h5 class="text-start">Title</h5>
+                                                </a>
+                                            </td>
+                                            <td>1</td>
+                                            <td>1000</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="modal-footer">
+                                    <button class="btn"
+                                            data-bs-dismiss="modal"
+                                            type="button">
+                                        Close
+                                    </button>
+                                    <button class="btn"
+                                            type="button">
+                                        Save changes
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn header__item favourites__btn position-relative"
+                            type="button">
+                        <i class="fa-solid fa-heart"></i>
+                        9+
+                        <span class="badge position-absolute top-100 start-50 translate-middle rounded-pill">
+                            <span class="visually-hidden">Cart</span>
+                        </span>
+                    </button>
+
+                    <div class="dropdown">
+                        <button aria-expanded="false"
+                                class="btn header__item"
+                                data-bs-toggle="dropdown"
+                                type="button">
+                            <i class="fa-solid fa-user"></i>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end fade">
+                            <li><a class="dropdown-item" href="#">Войти</a></li>
+                            <li><a class="dropdown-item" href="#">Зарегестрироваться</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header__bot">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="#">Navbar</a>
+                <button class="navbar-toggler header__burger rounded"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarNav"
+                        aria-controls="navbarNav"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto gap-lg-4">
+                        <li class="nav-item"><a href="#">Компьютеры</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="dropdown-toggle"
+                               href="#"
+                               role="button"
+                               data-bs-toggle="dropdown"
+                               aria-expanded="false">
+                                Ноутбуки
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Apple</a></li>
+                                <li><a class="dropdown-item" href="#">Acer</a></li>
+                                <li><a class="dropdown-item" href="#">HP</a></li>
+                                <li><a class="dropdown-item" href="#">...</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a href="#">Телефоны</a></li>
+                        <li class="nav-item"><a href="#">Камеры</a></li>
+                        <li class="nav-item"><a href="#">Другая техника</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<main class="main">
+    <div class="container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item"><a href="#">Library</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Data</li>
+            </ol>
+        </nav>
+    </div>
+
+    <div class="container py-2">
+        <div class="row">
+            <nav class="col-md-3 sidebar navbar navbar-expand-md align-self-start">
+                <div class="container p-sm-0">
+                    <button class="navbar-toggler rounded w-100 py-2 fs-6 dropdown__btn"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#sidebarNav"
+                            aria-controls="sidebarNav"
+                            aria-expanded="false"
+                            aria-label="Toggle navigation">
+                        Категории
+                        <i class="fa-solid fa-caret-down"></i>
+                    </button>
+                    <div class="collapse navbar-collapse" id="sidebarNav">
+                        <div class="list-group w-100">
+                            <a href="#" class="list-group-item list-group-item-action active" aria-current="true">Компьютеры</a>
+                            <a href="#" class="list-group-item list-group-item-action">Планшеты</a>
+                            <a href="#" class="list-group-item list-group-item-action">Ноутбуки</a>
+                            <a href="#" class="list-group-item list-group-item-action">Телефоны</a>
+                            <a href="#" class="list-group-item list-group-item-action">Камеры</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <main class="col content d-flex flex-column gap-3">
+                <h3 class="title">Компьютеры</h3>
+
+                <div class="row g-3">
+                    <div class="col-sm-6">
+                        <div class="dropdown">
+                            <button class="btn dropdown__btn w-100 justify-content-between" type="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                Сортировка
+                                <span>
+                                <span class="lh-1">Название (А-Я)</span>
+                                <i class="fa-solid fa-caret-down"></i>
+                                </span>
+                            </button>
+                            <ul class="dropdown-menu w-100">
+                                <li><a class="dropdown-item active" href="#">Название (А-Я)</a></li>
+                                <li><a class="dropdown-item" href="#">Название (Я-А)</a></li>
+                                <li><a class="dropdown-item" href="#">Цена (низкая > высокая)</a></li>
+                                <li><a class="dropdown-item" href="#">Цена (высокая > низкая)</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <div class="dropdown w-100">
+                            <button class="btn dropdown__btn w-100 justify-content-between" type="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                Показать
+                                <span>
+                                <span class="lh-1">20</span>
+                                <i class="fa-solid fa-caret-down"></i>
+                                </span>
+                            </button>
+                            <ul class="dropdown-menu w-100">
+                                <li><a class="dropdown-item active" href="#">20</a></li>
+                                <li><a class="dropdown-item" href="#">15</a></li>
+                                <li><a class="dropdown-item" href="#">10</a></li>
+                                <li><a class="dropdown-item" href="#">5</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row g-3">
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="product card">
+                            <div class="card-img-top rect position-relative">
+                                <img src="./img/products/printer.webp" class="background background_contain" alt="...">
+                            </div>
+                            <div class="card-body product__body">
+                                <header class="product__header">
+                                    <h4 class="product__title">
+                                        <a href="#" class="w-100">
+                                            Card title
+                                            Card title
+                                            Card title
+                                            Card title
+                                        </a>
+                                    </h4>
+                                </header>
+
+                                <main class="product__main">
+                                    <p class="product__description">
+                                        Some quick example text to build on the card title and make up the bulk of the
+                                        card's
+                                        content.
+                                        Some quick example text to build on the card title and make up the bulk of the
+                                        card's
+                                        content.
+                                    </p>
+                                </main>
+
+                                <footer class="product__footer d-flex justify-content-between">
+                                    <div class="product__price">
+                                        <small class="product__price_old"> 100$ </small>
+                                        95$
+                                    </div>
+                                    <nav class="product__nav d-flex align-items-center">
+                                        <a href="#" class="product__btn product__btn_like">
+                                            <i class="fa-regular fa-heart fs-5"></i>
+                                        </a>
+                                        <a href="#" class="product__btn product__btn_cart">
+                                            <i class="fa-solid fa-bag-shopping fs-5"></i>
+                                        </a>
+                                    </nav>
+                                </footer>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="product card">
+                            <div class="card-img-top rect position-relative">
+                                <img src="./img/products/printer.webp" class="background background_contain" alt="...">
+                            </div>
+                            <div class="card-body product__body">
+                                <header class="product__header">
+                                    <h4 class="product__title">
+                                        <a href="#" class="w-100">
+                                            Card title
+                                        </a>
+                                    </h4>
+                                </header>
+
+                                <main class="product__main">
+                                    <p class="product__description">
+                                        Some quick example text to build on the card title and make up the bulk of the
+                                        card's
+                                        content.
+                                    </p>
+                                </main>
+
+                                <footer class="product__footer d-flex justify-content-between">
+                                    <div class="product__price">
+                                        <small class="product__price_old"> 100$ </small>
+                                        95$
+                                    </div>
+                                    <nav class="product__nav d-flex align-items-center">
+                                        <a href="#" class="product__btn product__btn_like">
+                                            <i class="fa-regular fa-heart fs-5"></i>
+                                        </a>
+                                        <a href="#" class="product__btn product__btn_cart">
+                                            <i class="fa-solid fa-bag-shopping fs-5"></i>
+                                        </a>
+                                    </nav>
+                                </footer>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="product card">
+                            <div class="card-img-top rect position-relative">
+                                <img src="./img/products/printer.webp" class="background background_contain" alt="...">
+                            </div>
+                            <div class="card-body product__body">
+                                <header class="product__header">
+                                    <h4 class="product__title">
+                                        <a href="#" class="w-100">
+                                            Card title
+                                        </a>
+                                    </h4>
+                                </header>
+
+                                <main class="product__main">
+                                    <p class="product__description">
+                                        Some quick example text to build on the card title and make up the bulk of the
+                                        card's
+                                        content.
+                                    </p>
+                                </main>
+
+                                <footer class="product__footer d-flex justify-content-between">
+                                    <div class="product__price">
+                                        <small class="product__price_old"> 100$ </small>
+                                        95$
+                                    </div>
+                                    <nav class="product__nav d-flex align-items-center">
+                                        <a href="#" class="product__btn product__btn_like">
+                                            <i class="fa-regular fa-heart fs-5"></i>
+                                        </a>
+                                        <a href="#" class="product__btn product__btn_cart">
+                                            <i class="fa-solid fa-bag-shopping fs-5"></i>
+                                        </a>
+                                    </nav>
+                                </footer>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="product card">
+                            <div class="card-img-top rect position-relative">
+                                <img src="./img/products/printer.webp" class="background background_contain" alt="...">
+                            </div>
+                            <div class="card-body product__body">
+                                <header class="product__header">
+                                    <h4 class="product__title">
+                                        <a href="#" class="w-100">
+                                            Card title
+                                            Card title
+                                            Card title
+                                            Card title
+                                        </a>
+                                    </h4>
+                                </header>
+
+                                <main class="product__main">
+                                    <p class="product__description">
+                                        Some quick example text to build on the card title and make up the bulk of the
+                                        card's
+                                        content.
+                                        Some quick example text to build on the card title and make up the bulk of the
+                                        card's
+                                        content.
+                                    </p>
+                                </main>
+
+                                <footer class="product__footer d-flex justify-content-between">
+                                    <div class="product__price">
+                                        <small class="product__price_old"> 100$ </small>
+                                        95$
+                                    </div>
+                                    <nav class="product__nav d-flex align-items-center">
+                                        <a href="#" class="product__btn product__btn_like">
+                                            <i class="fa-regular fa-heart fs-5"></i>
+                                        </a>
+                                        <a href="#" class="product__btn product__btn_cart">
+                                            <i class="fa-solid fa-bag-shopping fs-5"></i>
+                                        </a>
+                                    </nav>
+                                </footer>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="product card">
+                            <div class="card-img-top rect position-relative">
+                                <img src="./img/products/printer.webp" class="background background_contain" alt="...">
+                            </div>
+                            <div class="card-body product__body">
+                                <header class="product__header">
+                                    <h4 class="product__title">
+                                        <a href="#" class="w-100">
+                                            Card title
+                                        </a>
+                                    </h4>
+                                </header>
+
+                                <main class="product__main">
+                                    <p class="product__description">
+                                        Some quick example text to build on the card title and make up the bulk of the
+                                        card's
+                                        content.
+                                    </p>
+                                </main>
+
+                                <footer class="product__footer d-flex justify-content-between">
+                                    <div class="product__price">
+                                        <small class="product__price_old"> 100$ </small>
+                                        95$
+                                    </div>
+                                    <nav class="product__nav d-flex align-items-center">
+                                        <a href="#" class="product__btn product__btn_like">
+                                            <i class="fa-regular fa-heart fs-5"></i>
+                                        </a>
+                                        <a href="#" class="product__btn product__btn_cart">
+                                            <i class="fa-solid fa-bag-shopping fs-5"></i>
+                                        </a>
+                                    </nav>
+                                </footer>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="product card">
+                            <div class="card-img-top rect position-relative">
+                                <img src="./img/products/printer.webp" class="background background_contain" alt="...">
+                            </div>
+                            <div class="card-body product__body">
+                                <header class="product__header">
+                                    <h4 class="product__title">
+                                        <a href="#" class="w-100">
+                                            Card title
+                                        </a>
+                                    </h4>
+                                </header>
+
+                                <main class="product__main">
+                                    <p class="product__description">
+                                        Some quick example text to build on the card title and make up the bulk of the
+                                        card's
+                                        content.
+                                    </p>
+                                </main>
+
+                                <footer class="product__footer d-flex justify-content-between">
+                                    <div class="product__price">
+                                        <small class="product__price_old"> 100$ </small>
+                                        95$
+                                    </div>
+                                    <nav class="product__nav d-flex align-items-center">
+                                        <a href="#" class="product__btn product__btn_like">
+                                            <i class="fa-regular fa-heart fs-5"></i>
+                                        </a>
+                                        <a href="#" class="product__btn product__btn_cart">
+                                            <i class="fa-solid fa-bag-shopping fs-5"></i>
+                                        </a>
+                                    </nav>
+                                </footer>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="product card">
+                            <div class="card-img-top rect position-relative">
+                                <img src="./img/products/printer.webp" class="background background_contain" alt="...">
+                            </div>
+                            <div class="card-body product__body">
+                                <header class="product__header">
+                                    <h4 class="product__title">
+                                        <a href="#" class="w-100">
+                                            Card title
+                                            Card title
+                                            Card title
+                                            Card title
+                                        </a>
+                                    </h4>
+                                </header>
+
+                                <main class="product__main">
+                                    <p class="product__description">
+                                        Some quick example text to build on the card title and make up the bulk of the
+                                        card's
+                                        content.
+                                        Some quick example text to build on the card title and make up the bulk of the
+                                        card's
+                                        content.
+                                    </p>
+                                </main>
+
+                                <footer class="product__footer d-flex justify-content-between">
+                                    <div class="product__price">
+                                        <small class="product__price_old"> 100$ </small>
+                                        95$
+                                    </div>
+                                    <nav class="product__nav d-flex align-items-center">
+                                        <a href="#" class="product__btn product__btn_like">
+                                            <i class="fa-regular fa-heart fs-5"></i>
+                                        </a>
+                                        <a href="#" class="product__btn product__btn_cart">
+                                            <i class="fa-solid fa-bag-shopping fs-5"></i>
+                                        </a>
+                                    </nav>
+                                </footer>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination">
+                        <li class="page-item"><a class="page-link" href="#"><i class="fa-solid fa-angle-left"></i></a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link active" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#"><i class="fa-solid fa-angle-right"></i></a>
+                        </li>
+                    </ul>
+                </nav>
+            </main>
+        </div>
+    </div>
+</main>
+
+<footer class="footer">
+    <div class="footer__top">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-md-3">
+                    <h4 class="footer__title">
+                        Информация
+                    </h4>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="footer__link">Главная</a></li>
+                        <li><a href="#" class="footer__link">О нас</a></li>
+                        <li><a href="#" class="footer__link">Оплата и доставка</a></li>
+                        <li><a href="#" class="footer__link">Гарантия</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-sm-6 col-md-3">
+                    <h4 class="footer__title">Время работы</h4>
+                    <ul class="list-unstyled">
+                        <li>г.X, ул. Пушкина, д.Колотушкина</li>
+                        <li>9:00 - 18:00</li>
+                        <li>Без выходных</li>
+                    </ul>
+                </div>
+
+                <div class="col-sm-6 col-md-3">
+                    <h4 class="footer__title">Связаться с нами</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="tel:+7 777 777 77 77">+7 777 777 77 77</a></li>
+                        <li><a href="tel:+7 888 888 77 77">+7 888 888 77 77</a></li>
+                        <li><a href="mailto:lorem@mail.ru">lorem@mail.ru</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-sm-6 col-md-3">
+                    <h4 class="footer__title">Мы в соц сетях</h4>
+                    <div class="d-flex gap-3">
+                        <a href="#"><i class="fs-2 fa-brands fa-youtube"></i></a>
+                        <a href="#"><i class="fs-2 fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fs-2 fa-brands fa-vk"></i></a>
+                        <a href="#"><i class="fs-2 fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer__bot">
+
+    </div>
+</footer>
+
+
+<button id="to-top_btn" class="btn btn_to-top rect">
+    <i class="fa-solid fa-chevron-up"></i>
+</button>
+</body>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+        crossorigin="anonymous"></script>
+<script src="./js/main.js"></script>
+</html>

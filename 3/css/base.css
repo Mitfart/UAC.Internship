@@ -1,10 +1,10 @@
 :root {
     --c-primary: #f84c4c;
-    --c-secondary: #100010;
+    --c-secondary: #030007;
     --c-base: #ffffff;
 
     --c-primary-rgb: 219, 60, 64;
-    --c-secondary-rgb: 16, 0, 16;
+    --c-secondary-rgb: 3, 0, 7;
     --c-base-rgb: 253, 246, 242;
 }
 
@@ -33,6 +33,10 @@ body {
     gap: 0;
 }
 
+.main {
+    flex-grow: 1;
+}
+
 
 
 .rect {
@@ -56,7 +60,7 @@ a {
     font-size: inherit;
 }
 a:hover, a:focus {
-    color: var(--c-secondary);
+    color: inherit;
 }
 a:before {
     content: '';
@@ -67,18 +71,46 @@ a:before {
     position: absolute;
     top: 100%;
     left: 50%;
-    Translate: -50% -100%;
+    translate: -50% -100%;
+
     background-color: var(--c-primary);
 
-    transition: .125s ease-in-out;
+    transition: inherit;
 }
 
 a:hover:before,
 a:focus:before {
     width: 100%;
 }
+.page-link {
+    color: var(--c-secondary);
+    transition: inherit;
+    padding: .125em .75em;
+}
+.page-link:hover,
+.page-link:focus {
+    color: var(--c-primary);
+}
+.page-link.active {
+    background-color: var(--c-primary);
+    border: none;
+}
+.page-link.active:hover,
+.page-link.active:focus {
+    color: var(--c-secondary);
+}
 
 
+.row {
+    gap: 0;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    Translate: -50% -50%;
+}
 .background {
     width: 100%;
     height: 100%;
@@ -148,4 +180,14 @@ a:focus:before {
 .product__footer {
     padding-top: 1rem;
     border-top: .125rem solid rgba(var(--c-secondary-rgb), .125);
+}
+
+
+.dropdown > .dropdown__btn {
+    color: inherit;
+    background-color: transparent;
+    border: .125rem solid rgba(var(--c-secondary-rgb), .125);
+}
+.dropdown:active > .dropdown__btn {
+    border-color: var(--c-primary);
 }
