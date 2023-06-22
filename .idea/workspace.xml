@@ -5,7 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9dfc424a-1fda-4c74-b303-3cdd2c0fc591" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/UAC.Internship.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/UAC.Internship.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/3/category.html" beforeDir="false" afterPath="$PROJECT_DIR$/3/category.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/3/css/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/3/css/base.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/3/css/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/3/css/header.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/3/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/3/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/3/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/3/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/3/product.html" beforeDir="false" afterPath="$PROJECT_DIR$/3/product.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,9 +24,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
-        <option value="CSS File" />
         <option value="HTML File" />
         <option value="Python Script" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -76,10 +84,25 @@
       <workItem from="1685791290151" duration="1071000" />
       <workItem from="1685872406288" duration="7071000" />
       <workItem from="1685892450507" duration="938000" />
+      <workItem from="1686392669630" duration="10024000" />
+      <workItem from="1686472976495" duration="7070000" />
+      <workItem from="1686821462242" duration="139000" />
+      <workItem from="1686831890982" duration="398000" />
+      <workItem from="1686833571969" duration="1219000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/3/js/main.js</url>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

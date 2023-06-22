@@ -1,0 +1,24 @@
+.cart__modal-content {
+    gap: 0;
+}
+
+.cart__img {
+    min-width: 5rem;
+}
+
+.cart__modal-header {
+    background-color: var(--c-primary);
+    color: var(--c-base);
+}
+
+.cart__btn-close {
+    color: var(--c-base);
+}
+
+.cart__link {
+    color: var(--c-secondary);
+}
+
+.cart__link:hover, .cart__link:focus {
+    color: var(--c-primary);
+}

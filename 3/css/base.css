@@ -8,6 +8,7 @@
     --c-base-rgb: 253, 246, 242;
 }
 
+
 ::selection {
     background-color: var(--c-primary);
     color: var(--c-base);
@@ -43,67 +44,21 @@ body {
     display: flex;
     gap: 0;
 }
+
 .rect:before {
     content: '';
     float: right;
     padding-bottom: 100%;
 }
-.rect_25:before { padding-bottom: 25%; }
-.rect_50:before { padding-bottom: 50%; }
 
-
-a {
-    display: inline-block;
-    position: relative;
-    text-decoration: none;
-    color: var(--c-primary);
-    font-size: inherit;
-}
-a:hover, a:focus {
-    color: inherit;
-}
-a:before {
-    content: '';
-    width: 0;
-    height: .125em;
-    border-radius: 1000rem;
-
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    translate: -50% -100%;
-
-    background-color: var(--c-primary);
-
-    transition: inherit;
+.rect_25:before {
+    padding-bottom: 25%;
 }
 
-a:hover:before,
-a:focus:before {
-    width: 100%;
-}
-.page-link {
-    color: var(--c-secondary);
-    transition: inherit;
-    padding: .125em .75em;
-}
-.page-link:hover,
-.page-link:focus {
-    color: var(--c-primary);
-}
-.page-link.active {
-    background-color: var(--c-primary);
-    border: none;
-}
-.page-link.active:hover,
-.page-link.active:focus {
-    color: var(--c-secondary);
+.rect_50:before {
+    padding-bottom: 50%;
 }
 
-
-.row {
-    gap: 0;
-}
 
 .center {
     position: absolute;
@@ -111,6 +66,8 @@ a:focus:before {
     left: 50%;
     Translate: -50% -50%;
 }
+
+
 .background {
     width: 100%;
     height: 100%;
@@ -120,10 +77,89 @@ a:focus:before {
     top: 50%;
     left: 50%;
     Translate: -50% -50%;
+
+    z-index: 0;
 }
+
 .background_contain {
     object-fit: contain;
 }
+
+
+a,
+.nav-link {
+    color: var(--c-primary);
+    display: inline-block;
+
+    position: relative;
+    text-decoration: none;
+    font-size: inherit;
+
+    transition: inherit;
+}
+
+a:hover,
+a:focus,
+.nav-link:hover,
+.nav-link:focus {
+    color: inherit;
+}
+
+a:before,
+.nav-link:before {
+    content: '';
+
+    background-color: var(--c-primary);
+
+    width: 0;
+    height: .125em;
+    border-radius: 1000rem;
+
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    translate: -50% -100%;
+
+    transition: inherit;
+}
+
+a.active:before,
+.nav-link.active:before {
+    width: 60%;
+}
+
+a:hover:before,
+a:focus:before,
+.nav-link:hover:before,
+.nav-link:focus:before {
+    width: 100%;
+}
+
+.nav-link.active {
+    color: inherit;
+}
+
+.page-link {
+    color: var(--c-secondary);
+    transition: inherit;
+    padding: .125em .75em;
+}
+
+.page-link:hover,
+.page-link:focus {
+    color: var(--c-primary);
+}
+
+.page-link.active {
+    background-color: var(--c-primary);
+    border: none;
+}
+
+
+.row {
+    gap: 0;
+}
+
 
 
 .btn {
@@ -134,60 +170,31 @@ a:focus:before {
 }
 
 .btn:hover {
+    color: var(--c-secondary);
     background-color: var(--c-primary);
+}
+
+
+.navbar-toggler:focus,
+.navbar-toggler:focus-visible {
+    box-shadow: none;
+    border: .125rem solid var(--c-primary);
+}
+
+
+.input-group {
+    gap: 0;
+    margin: 0;
+}
+
+
+.list-group-item.active {
+    background-color: var(--c-primary);
+    border: none;
 }
 
 
 .title {
     text-align: center;
     margin-bottom: 2em;
-}
-
-.product {
-    height: 100%;
-}
-.product:hover {
-    box-shadow: 0 .5rem 1.5rem -.5rem rgba(var(--c-secondary-rgb), .25);
-}
-.product__body {
-    display: flex;
-    flex-direction: column;
-}
-.product__main {
-    flex-grow: 1;
-}
-.product__title {
-    white-space: nowrap;
-    overflow: hidden;
-}
-.product__description {
-    flex-grow: 1;
-}
-.product__price {
-    color: var(--c-primary);
-    font-size: 1.5rem;
-    display: flex;
-    align-items: center;
-    font-weight: 500;
-}
-.product__price_old {
-    color: rgba(var(--c-secondary-rgb), .5);
-    font-size: 1rem;
-    text-decoration: line-through;
-    font-weight: 300;
-}
-
-.product__footer {
-    padding-top: 1rem;
-    border-top: .125rem solid rgba(var(--c-secondary-rgb), .125);
-}
-
-
-.dropdown > .dropdown__btn {
-    color: inherit;
-    background-color: transparent;
-    border: .125rem solid rgba(var(--c-secondary-rgb), .125);
-}
-.dropdown:active > .dropdown__btn {
-    border-color: var(--c-primary);
 }

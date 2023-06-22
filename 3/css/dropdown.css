@@ -1,0 +1,29 @@
+.dropdown__btn {
+    color: inherit;
+    background-color: transparent;
+    border: .125rem solid rgba(var(--c-secondary-rgb), .125);
+}
+
+.dropdown:active > .dropdown__btn {
+    border-color: var(--c-primary);
+}
+
+.dropdown-item.active {
+    background-color: var(--c-primary);
+}
+
+.dropdown-item.active:hover {
+    color: var(--c-secondary);
+}
+
+
+@media (min-width: 992px) {
+    .nav-item.dropdown .dropdown-menu {
+        display: none;
+        margin-top: 0;
+    }
+
+    .nav-item.dropdown:hover .dropdown-menu {
+        display: block;
+    }
+}

@@ -1,0 +1,18 @@
+.footer {
+    padding: .5rem 0;
+    color: var(--c-base);
+    background-color: var(--c-primary);
+}
+
+.footer a {
+    color: var(--c-base);
+}
+
+.footer a:hover {
+    color: var(--c-secondary);
+}
+
+.footer__title {
+    padding: .5rem 0;
+    border-bottom: .125rem solid rgba(var(--c-base-rgb), .25);
+}

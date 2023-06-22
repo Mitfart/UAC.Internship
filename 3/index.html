@@ -25,7 +25,14 @@
           referrerpolicy="no-referrer"/>
 
     <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/dropdown.css">
+    <link rel="stylesheet" href="./css/cart.css">
+    <link rel="stylesheet" href="./css/search.css">
+    <link rel="stylesheet" href="./css/btn_to_top.css">
     <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/product.css">
+    <link rel="stylesheet" href="./css/benefit.css">
 </head>
 
 
@@ -40,9 +47,9 @@
                         <span class="lh-1 d-none d-sm-inline">+7 777 777 77 77</span>
                     </a>
                 </div>
-                <div class="col header__menu d-flex justify-content-end align-items-center">
+                <div class="col d-flex justify-content-end align-items-center">
 
-                    <button class="btn header__item search__btn"
+                    <button class="btn header__item"
                             data-bs-target="#search__modal"
                             data-bs-toggle="modal"
                             type="button">
@@ -65,7 +72,7 @@
                                                placeholder="Search..."
                                                aria-label="Search"
                                                name="search">
-                                        <button class="btn search__btn search__btn_clear" type="button">
+                                        <button class="btn search__btn" type="button">
                                             <i class="fa-solid fa-xmark fs-4"></i>
                                         </button>
                                     </div>
@@ -212,9 +219,9 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto gap-lg-4">
-                        <li class="nav-item"><a href="#">Компьютеры</a></li>
+                        <li class="nav-item"><a class="header__link" href="#">Компьютеры</a></li>
                         <li class="nav-item dropdown">
-                            <a class="dropdown-toggle"
+                            <a class="dropdown-toggle header__link"
                                href="#"
                                role="button"
                                data-bs-toggle="dropdown"
@@ -228,9 +235,9 @@
                                 <li><a class="dropdown-item" href="#">...</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item"><a href="#">Телефоны</a></li>
-                        <li class="nav-item"><a href="#">Камеры</a></li>
-                        <li class="nav-item"><a href="#">Другая техника</a></li>
+                        <li class="nav-item"><a class="header__link" href="#">Телефоны</a></li>
+                        <li class="nav-item"><a class="header__link" href="#">Камеры</a></li>
+                        <li class="nav-item"><a class="header__link" href="#">Другая техника</a></li>
                     </ul>
                 </div>
             </div>
@@ -317,8 +324,8 @@
                 </div>
 
                 <div class="col-sm-6 col-md-4 col-xl-3">
-                    <div class="product card">
-                        <div class="card-img-top rect position-relative">
+                    <div class="product card ">
+                        <div class="card-img-top rect position-relative px-2">
                             <img src="./img/products/printer.webp" class="background background_contain" alt="...">
                         </div>
                         <div class="card-body product__body">
